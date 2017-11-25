@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <input type="button" value="放大" class="bigger">
+        <input type="button" value="缩小" class="small">
+    </div>
+<div>
+    <textarea name="" id="text" cols="30" rows="10">你好你好你好你好你好你好你好你好你好你好你好你好</textarea>
+</div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(".bigger").on("click",function(){
+            if($("#text").height() < 500)
+                if(!$("#text").is(":animated")){
+                $("#text").animate({
+                    height:"+=50"
+                });
+            }
+        })
+
+    </script>
+</body>
+</html>
