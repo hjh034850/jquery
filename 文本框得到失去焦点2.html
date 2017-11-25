@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .selected{
+            background: mediumorchid;
+            border: 1px solid mediumorchid;
+        }
+    </style>
+</head>
+<body>
+    <p>名称</p><input type="text" id="name" value="名称">
+    <p>密码</p><input type="password" id="password" value="dwqdq">
+    <p>详细信息</p><textarea name="" id="infor" cols="30" rows="10">fewhfeehf</textarea>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(":input").on("focus",function(){
+            $(this).addClass("selected");
+            if(this.value == this.defaultValue){
+                this.value = "";
+            }
+        }).on("blur",function(){
+            $(this).removeClass("selected");
+            if(this.value == ""){
+                this.value = this.defaultValue;
+            }
+        })
+    </script>
+</body>
+</html>
