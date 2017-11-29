@@ -7,13 +7,18 @@
 <body>
 <button class="btnup">向上</button>
 <button class="btndown">向下</button>
-<textarea name="" id="" cols="7" rows="7">你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
+<textarea name="" id="text" cols="7" rows="7">你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
 你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
 </textarea>
 <script src="jquery-1.12.4.js"></script>
 <script>
     $(".btndown").on("click",function(){
-
+       /* $("#text").animate({scrollTop :"+=25"},400);*/
+       $("#text").scrollTop($("#text").scrollTop() +25);
+    })
+    $(".btnup").on("click",function(){
+        /* $("#text").animate({scrollTop :"-=25"},400);*/
+        $("#text").scrollTop($("#text").scrollTop() -25);
     })
 
 
