@@ -16,15 +16,14 @@
     <p>详细信息</p><textarea name="" id="infor" cols="30" rows="10"></textarea>
     <script src="jquery-1.12.4.js"></script>
     <script>
-        $("#name").on("focus",function(){
-            $("#name").addClass("selected").siblings().removeClass("selected");
-        })
-        $("#password").on("focus",function(){
-            $("#password").addClass("selected").siblings().removeClass("selected");
-        })
-        $("#infor").on("focus",function(){
-            $("#infor").addClass("selected").siblings().removeClass("selected");
-        })
+       $(":input").on("focus",function(){
+           $(this).addClass("selected");
+       }).on("blur",function(){
+           $(this).removeClass("selected");
+
+
+
+       })
 
 
 
