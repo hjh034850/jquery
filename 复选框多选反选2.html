@@ -43,9 +43,15 @@
 <script>
     $("#btn1").on("click",function(){
         $("#select1 option:selected").appendTo("#select2");
-    })
+    });
     $("#btn2").on("click",function(){
         $("#select1 option").appendTo("#select2");
+    });
+    $("#btn3").on("click",function(){
+        $("#select2 option:selected").appendTo("#select1");
+    });
+    $("#btn4").on("click",function(){
+        $("#select2 option").appendTo("#select1");
     })
 </script>
 </body>
